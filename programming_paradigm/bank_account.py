@@ -1,6 +1,5 @@
 class BankAccount:
     def __init__(self, initial_balance=0):
-        # Private attribute to store account balance
         self.__account_balance = initial_balance
 
     def deposit(self, amount):
@@ -18,6 +17,7 @@ class BankAccount:
         else:
             print("Insufficient funds.")
             return False
-        
+
     def display_balance(self):
-        print(f"Current balance: ${self.__account_balance:.2f}")
+        print(f"Current Balance: ${self.__account_balance:.2f}")
+
