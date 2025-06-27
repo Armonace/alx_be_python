@@ -1,12 +1,10 @@
-# library_system.py
-
 class Book:
     def __init__(self, title, author):
         self.title = title
         self.author = author
 
     def __str__(self):
-        return f"{self.title} by {self.author}"
+        return f"Book: {self.title} by {self.author}"
 
 
 class EBook(Book):
@@ -15,7 +13,7 @@ class EBook(Book):
         self.file_size = file_size
 
     def __str__(self):
-        return f"{self.title} by {self.author} [E-Book, {self.file_size}MB]"
+        return f"EBook: {self.title} by {self.author}, File Size: {self.file_size}KB"
 
 
 class PrintBook(Book):
@@ -24,7 +22,7 @@ class PrintBook(Book):
         self.page_count = page_count
 
     def __str__(self):
-        return f"{self.title} by {self.author} [Print Book, {self.page_count} pages]"
+        return f"PrintBook: {self.title} by {self.author}, Page Count: {self.page_count}"
 
 
 class Library:
@@ -38,5 +36,6 @@ class Library:
         if not self.books:
             print("The library has no books.")
         for book in self.books:
-            print(book)  # __str__ is automatically called
+            print(book)  # __str__ will be called automatically
+
 
